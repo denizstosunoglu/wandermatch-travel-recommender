@@ -2,29 +2,59 @@
 
 WanderMatch is a beginner-friendly Python console program that recommends a travel destination based on the user's preferences.
 
-The program asks questions about travel style, budget, weather, activity type, and nightlife interest. Based on the answers, it suggests a destination such as Bali, Tokyo, New York, Cappadocia, Barcelona, Paris, or Belgium for a festival trip.
+The program asks the user four simple questions about travel style, budget, weather, and nightlife. Based on the user's answers, it creates a unique combination and recommends one destination from 36 possible matches.
+
+## Project File
+
+You can view the main Python file here:
+
+[main.py](main.py)
 
 ## Why I Built This Project
 
-I created this project for my Code in Place final project because I love traveling and wanted to build something personal, fun, and useful. Instead of making a random quiz, I wanted the program to feel like a simple travel assistant.
+I created this project for my Code in Place final project because I love traveling and wanted to build something personal, fun, and useful.
+
+Instead of making a random quiz, I wanted to create a simple travel assistant that gives a destination recommendation based on the user's own preferences.
+
+## How It Works
+
+The program asks the user these four questions:
+
+1. Do you prefer nature, beach, or city?
+2. What is your budget? low, medium, or high?
+3. Do you prefer warm or cold weather?
+4. Do you want nightlife? yes or no?
+
+Each answer becomes part of a key. The program then uses that key to find a matching destination from a dictionary.
+
+For example:
+
+```text
+nature + medium + warm + yes = Bali
+city + high + cold + no = Copenhagen
+beach + high + warm + yes = Ibiza
+```
 
 ## Features
 
 - Asks the user travel-related questions
-- Accepts different travel preferences
-- Recommends a destination based on the answers
-- Uses beginner-friendly Python concepts
+- Recommends a destination from 36 possible combinations
+- Uses valid answer checking
+- If the user enters an unexpected answer, the program asks the question again
 - Runs in the console
+- Uses beginner-friendly Python code
 
 ## Python Concepts Used
 
 - `input()`
 - `print()`
 - Variables
-- `if`, `elif`, and `else` statements
+- Strings
+- Dictionaries
+- `if` statements
+- `while` loops
 - Functions
-- String comparisons
-- Basic program structure
+- Basic input validation
 
 ## Example Output
 
@@ -32,16 +62,30 @@ I created this project for my Code in Place final project because I love traveli
 Welcome to WanderMatch!
 Answer a few questions and I will recommend your next travel destination.
 
-Do you prefer beach, city, nature, or festival? beach
-Do you want relaxing, adventurous, cultural, or party activities? relaxing
+Do you prefer nature, beach, or city? nature
 What is your budget? low, medium, or high? medium
 Do you prefer warm or cold weather? warm
 Do you want nightlife? yes or no? yes
 
+Your travel profile:
+Travel style: nature
+Budget: medium
+Weather preference: warm
+Nightlife: yes
+
 Your recommended destination is:
-Bali, Indonesia
+Bali
 
 Thanks for using WanderMatch!
+```
+
+## Example With Invalid Input
+
+```text
+Do you prefer nature, beach, or city? mountain
+I did not understand. Please answer with one of the options shown in the question.
+
+Do you prefer nature, beach, or city? nature
 ```
 
 ## How to Run
@@ -52,6 +96,12 @@ Thanks for using WanderMatch!
 
 ```bash
 python main.py
+```
+
+or:
+
+```bash
+python3 main.py
 ```
 
 ## Project Status
