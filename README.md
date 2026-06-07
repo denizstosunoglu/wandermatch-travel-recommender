@@ -1,4 +1,4 @@
- # WanderMatch: A Travel Destination Recommender 🌍
+# WanderMatch: A Travel Destination Recommender 🌍
 
 WanderMatch is a beginner-friendly Python console program that recommends a travel destination based on the user's preferences.
 
@@ -42,3 +42,22 @@ Your recommended destination is:
 Bali, Indonesia
 
 Thanks for using WanderMatch!
+```
+
+## How to Run
+
+1. Download or clone this repository.
+2. Open the project folder.
+3. Run the program with Python:
+
+```bash
+python main.py
+```
+
+## Project Status
+
+This project was created as a final project for Code in Place.
+
+## Author
+
+Created by Deniz Tosunoğlu.
